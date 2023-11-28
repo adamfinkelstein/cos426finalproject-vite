@@ -74,7 +74,7 @@ Both models were downloaded from the Google Poly project:
 
 * [Flower](https://poly.google.com/view/eydI4__jXpi)
 
-This skeleton project was adapted from edwinwebb's ThreeJS [seed project](https://github.com/edwinwebb/three-seed) by Reilly Bova (Princeton ’20), and published [here on github](https://github.com/ReillyBova/three-seed). It was later slightly updated and setup as a github template by Adam Finkelstein and Joseph Lou, and is hosted [here on github](https://github.com/adamfinkelstein/cos426finalproject).
+This skeleton project was adapted from edwinwebb's ThreeJS [seed project](https://github.com/edwinwebb/three-seed) by Reilly Bova (Princeton ’20), and published [here on github](https://github.com/ReillyBova/three-seed). It was later slightly updated and setup as a github template by Adam Finkelstein and Joseph Lou (Princeton '23), and is hosted [here on github](https://github.com/adamfinkelstein/cos426finalproject-vite). Finally it was ported from `node` and Javascript to the more nodern `vite` and Typescript by Jude Muriithi (Princeton '24).
 
 ## License
 [MIT](./LICENSE)
