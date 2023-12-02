@@ -19,7 +19,8 @@
     "scripts": {
         "start": "vite",
         "build": "tsc && vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "format": "prettier --write ."
     },
     "dependencies": {
         "dat.gui": "^0.7.9",
@@ -32,6 +33,9 @@
         "typescript": "^5.2.2",
         "vite": "^5.0.0"
     },
+    "optionalDependencies": {
+        "@rollup/rollup-linux-x64-gnu": "4.6.1"
+    },
     "prettier": {
         "tabWidth": 4,
         "singleQuote": true,
@@ -39,7 +43,7 @@
         "semi": true,
         "trailingComma": "es5",
         "bracketSpacing": true,
-        "jsxBracketSameLine": false,
+        "bracketSameLine": false,
         "arrowParens": "always",
         "printWidth": 80
     }
