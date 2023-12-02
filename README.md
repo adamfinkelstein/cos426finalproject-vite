@@ -54,7 +54,7 @@ This project uses the Vite web framework to run web servers and build code for d
 
 This project has been adapted from previous years to use TypeScript, a type annotation syntax for JavaScript which prevents common bugs and allows for more detailed autocomplete in programming environments like VS Code. Learning TypeScript is as simple as learning how to define types and use existing type definitions; you can quickly pick up the basics by skimming [the TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/2/basic-types.html).
 
-TypeScript verifies types by checking types with the TypeScript compiler, `tsc`, before removing type annotations and transpiling to JavaScript. You can control how strict the TypeScript compiler is by editing `tsconfig.json` (see the [tsconfig reference](https://www.typescriptlang.org/tsconfig)).
+TypeScript verifies types by checking types with the TypeScript compiler, `tsc`, before removing type annotations and transpiling to JavaScript. You can control how strict the TypeScript compiler is by editing `tsconfig.json` (see the [tsconfig reference](https://www.typescriptlang.org/tsconfig)). Also note that older NPM packages may not include TypeScript-compatible type definitions by default. Type definitions for these packages can often be found in the `@types` NPM repository, and installed alongside the package using `npm install --save-dev @types/<package-name>`.
 
 ## Editing the Code
 
