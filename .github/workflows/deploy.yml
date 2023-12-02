@@ -23,9 +23,12 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+<<<<<<< HEAD
 
       - name: Install Linux-specific dependencies
         run: npm i @rollup/rollup-linux-x64-gnu
+=======
+>>>>>>> 8afbdd1b0c082c6169325d95d6447769646dcfe2
 
       - name: Build project
         run: npm run build
