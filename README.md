@@ -60,7 +60,7 @@ TypeScript verifies types by checking types with the TypeScript compiler, `tsc`,
 
 The first file you should open is `./src/app.ts`. This includes the setup for your ThreeJS scene, as well important global-level operations like the render loop. At the top of the file, you will see both modular imports for objects from the ThreeJS library dependency, and also modular imports from the local project directory.
 
-Next, navigate to `.src/components/scenes/SeedScene.ts`. This file contains the definition for the class `SeedScene`, and the sets this class as the default export. We can import the `SeedScene` class directly from `./scenes/SeedScene` (this [bare import syntax](https://vitejs.dev/guide/features#npm-dependency-resolving-and-pre-bundling) is one of Vite's features).
+Next, navigate to `.src/scenes/SeedScene.ts`. This file contains the definition for the class `SeedScene`, and the sets this class as the default export. We can import the `SeedScene` class directly from `./scenes/SeedScene` (this [bare import syntax](https://vitejs.dev/guide/features#npm-dependency-resolving-and-pre-bundling) is one of Vite's features).
 
 Take a look at the constructor in `SeedScene.ts`. The call `super()` invokes the parent constructor for the class, which is `Scene()` here. Then we add an instance variable called `state`, and populate it with some default settings. One of these initialization, `new dat.GUI()`, will create a simple user interface that should already be familiar to you. You can [learn more about dat.GUI here](https://github.com/dataarts/dat.gui/blob/master/API.md), or you can uninstall it from the project via `npm uninstall dat.gui`.
 
