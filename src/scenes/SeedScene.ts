@@ -5,9 +5,9 @@ import Flower from '../objects/Flower';
 import Land from '../objects/Land';
 import BasicLights from '../lights/BasicLights';
 
-// Define an object type which describes the 3D objects we'll add to the scene.
-type SceneObject = {
-    // A scene object *might* have an update method which takes in a timestamp.
+// Define an object type which describes each object in the update list
+type UpdateChild = {
+    // Each object *might* contain an update function
     update?: (timeStamp: number) => void;
 };
 
@@ -16,7 +16,7 @@ class SeedScene extends Scene {
     state: {
         gui: dat.GUI;
         rotationSpeed: number;
-        updateList: SceneObject[];
+        updateList: UpdateChild[];
     };
 
     constructor() {
@@ -43,7 +43,7 @@ class SeedScene extends Scene {
         this.state.gui.add(this.state, 'rotationSpeed', -5, 5);
     }
 
-    addToUpdateList(object: SceneObject): void {
+    addToUpdateList(object: UpdateChild): void {
         this.state.updateList.push(object);
     }
 
