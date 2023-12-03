@@ -46,9 +46,9 @@ The dependencies below these fields tell npm what libraries (and more specifical
 
 Now that your development environment is ready to go, you can spin up a local development webserver using `npm start`. This command will bundle the project code and output a link to localhost (typically [http://localhost:5173](http://localhost:5173)). Visit this in your web browser; every time you make changes to the code, _the page will automatically refresh!_ If you did everything correctly, you should see something that looks like [this](https://adamfinkelstein.github.io/cos426finalproject-vite/) in your browser. Congratulations --- now you are ready to work!
 
-## Vite
+## Vite and GitHub Pages
 
-This project uses the Vite web framework to run web servers and build code for deployment on the web. Settings for Vite can be specified in `vite.config.ts` (see [Vite's config reference](https://vitejs.dev/config/)). When deploying your site to Github Pages, you'll need to make sure that Vite is configured such that your project is served from a folder which matches your repository name. The scaffolding code to do this already included in `vite.config.ts`.
+This project uses the Vite web framework to run web servers and build code for deployment on the web. Settings for Vite can be specified in `vite.config.ts` (see [Vite's config reference](https://vitejs.dev/config/)). Through GitHub Actions, this repo is currently configured to create a Vite production build and automatically deploy it to GitHub Pages every time a change is pushed to the `main` branch.  In order for this deployment to work, you'll need to [follow these steps to configure the `gh-pages` branch](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site), and make sure that Vite is configured so that your project is served from a folder which matches your repository name. The scaffolding code for this second step is already included in `vite.config.ts`.
 
 ## Working with TypeScript
 
