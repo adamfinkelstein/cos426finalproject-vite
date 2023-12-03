@@ -44,17 +44,19 @@ The dependencies below these fields tell npm what libraries (and more specifical
 
 ## Launching a Local Webserver
 
-Now that your development environment is ready to go, you can spin up a local development webserver using `npm start`. This command will bundle the project code and output a link to localhost (typically [http://localhost:5173](http://localhost:5173)). Visit this in your web browser; every time you make changes to the code, _the page will automatically refresh!_ If you did everything correctly, you should see something that looks like [this](https://adamfinkelstein.github.io/cos426finalproject-vite/) in your browser. Congratulations --- now you are ready to work!
+Now that your development environment is ready to go, you can spin up a local development webserver using `npm start`. This command will bundle the project code and output a link to localhost. Visit this in your web browser; every time you make changes to the code, _the page will automatically refresh!_ If you did everything correctly, you should see something that looks like [this](https://adamfinkelstein.github.io/cos426finalproject-vite/) in your browser. Congratulations --- now you are ready to work!
 
 ## Vite and GitHub Pages
 
-This project uses the Vite web framework to run web servers and build code for deployment on the web. Settings for Vite can be specified in `vite.config.ts` (see [Vite's config reference](https://vitejs.dev/config/)). Through GitHub Actions, this repo is currently configured to create a Vite production build and automatically deploy it to GitHub Pages every time a change is pushed to the `main` branch.  In order for this deployment to work, you'll need to [follow these steps to configure the `gh-pages` branch](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site), and make sure that Vite is configured so that your project is served from a folder which matches your repository name. The scaffolding code for this second step is already included in `vite.config.ts`.
+This project uses the Vite web framework to run the development server and build code for deployment on the web. Settings for Vite can be specified in `vite.config.ts` (see [Vite's config reference](https://vitejs.dev/config/)). Through GitHub Actions, this repo is currently configured to create a Vite production build and automatically deploy it to GitHub Pages every time a change is pushed to the `main` branch.  In order for this deployment to work, you'll need to [follow these steps to configure the `gh-pages` branch](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site), and make sure that Vite serves your project from a folder which matches your repository name. The scaffolding code for this second step is already included in `vite.config.ts`.
 
 ## Working with TypeScript
 
 This project has been adapted from previous years to use TypeScript, a type annotation syntax for JavaScript which prevents common bugs and allows for more detailed autocompletion in programming environments like VS Code. Learning TypeScript is as simple as learning how to define types and use existing type definitions; you can quickly pick up the basics by skimming [the TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/2/basic-types.html).
 
-TypeScript verifies types by checking types with the TypeScript compiler, `tsc`, before removing type annotations and transpiling to JavaScript. You can control how strict the TypeScript compiler is by editing `tsconfig.json` (see the [tsconfig reference](https://www.typescriptlang.org/tsconfig)). Also note that older NPM packages may not include TypeScript-compatible type definitions by default. Type definitions for these packages can often be found in the `@types` NPM repository and installed alongside the package using `npm install --save-dev @types/<package-name>`.
+TypeScript verifies types by checking types with the TypeScript compiler, `tsc`, before removing type annotations and transpiling to JavaScript. You can control how strict the TypeScript compiler is by editing `tsconfig.json` (see the [tsconfig reference](https://www.typescriptlang.org/tsconfig)).
+
+Note that older NPM packages may not include TypeScript-compatible type definitions by default. Type definitions for these packages can often be found in the `@types` NPM repository and installed alongside the package using `npm install --save-dev @types/<package-name>`.
 
 ## Editing the Code
 
@@ -70,7 +72,7 @@ After (re)setting the background to a nice sky blue, turn your eyes to the next 
 
 Real quickly, another interesting function in the `SeedScene` class is `update()`. If you return to `app.ts`, you will see that we invoke this function via `scene.update()` in the render loop. Be careful to understand what we are doing within `SeedScene.update()` and how it affects the dynamic behavior on the screen.
 
-Once you understand the `SeedScene` class, the next place to look is `./src/components/objects/Flower.ts`. Overall, this `Flower` class is fairly similar to `SeedScene`, but watch out for a few key differences: first, `Flower` extends `Group`, not `Scene`; second, the `Flower` constructor takes an argument, which is used to reference the `gui` property of the parent (`SeedScene` here). Finally, for a more advanced animation example, check out the `spin()` function to see how we time the flower's jump using TweenJS.
+Once you understand the `SeedScene` class, the next place to look is `./src/objects/Flower.ts`. Overall, this `Flower` class is fairly similar to `SeedScene`, but watch out for a few key differences: first, `Flower` extends `Group`, not `Scene`; second, the `Flower` constructor takes an argument, which is used to reference the `gui` property of the parent (`SeedScene` here). Finally, for a more advanced animation example, check out the `spin()` function to see how we time the flower's jump using TweenJS.
 
 ## Importing Local Files
 
