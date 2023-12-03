@@ -44,7 +44,7 @@ The dependencies below these fields tell npm what libraries (and more specifical
 
 ## Launching a Local Webserver
 
-Now that your development environment is ready to go, you can spin up a local development webserver using `npm start`. This command will bundle the project code and a link to localhost (typically [http://localhost:5173](http://localhost:5173)). Visit this in your web browser; every time you make changes to the code, _the page will automatically refresh!_ If you did everything correctly, you should see something that looks like [this](https://adamfinkelstein.github.io/cos426finalproject-vite/) in your browser. Congratulations --- now you are ready to work!
+Now that your development environment is ready to go, you can spin up a local development webserver using `npm start`. This command will bundle the project code and output a link to localhost (typically [http://localhost:5173](http://localhost:5173)). Visit this in your web browser; every time you make changes to the code, _the page will automatically refresh!_ If you did everything correctly, you should see something that looks like [this](https://adamfinkelstein.github.io/cos426finalproject-vite/) in your browser. Congratulations --- now you are ready to work!
 
 ## Vite
 
@@ -52,9 +52,9 @@ This project uses the Vite web framework to run web servers and build code for d
 
 ## Working with TypeScript
 
-This project has been adapted from previous years to use TypeScript, a type annotation syntax for JavaScript which prevents common bugs and allows for more detailed autocomplete in programming environments like VS Code. Learning TypeScript is as simple as learning how to define types and use existing type definitions; you can quickly pick up the basics by skimming [the TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/2/basic-types.html).
+This project has been adapted from previous years to use TypeScript, a type annotation syntax for JavaScript which prevents common bugs and allows for more detailed autocompletion in programming environments like VS Code. Learning TypeScript is as simple as learning how to define types and use existing type definitions; you can quickly pick up the basics by skimming [the TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/2/basic-types.html).
 
-TypeScript verifies types by checking types with the TypeScript compiler, `tsc`, before removing type annotations and transpiling to JavaScript. You can control how strict the TypeScript compiler is by editing `tsconfig.json` (see the [tsconfig reference](https://www.typescriptlang.org/tsconfig)). Also note that older NPM packages may not include TypeScript-compatible type definitions by default. Type definitions for these packages can often be found in the `@types` NPM repository, and installed alongside the package using `npm install --save-dev @types/<package-name>`.
+TypeScript verifies types by checking types with the TypeScript compiler, `tsc`, before removing type annotations and transpiling to JavaScript. You can control how strict the TypeScript compiler is by editing `tsconfig.json` (see the [tsconfig reference](https://www.typescriptlang.org/tsconfig)). Also note that older NPM packages may not include TypeScript-compatible type definitions by default. Type definitions for these packages can often be found in the `@types` NPM repository and installed alongside the package using `npm install --save-dev @types/<package-name>`.
 
 ## Editing the Code
 
@@ -74,7 +74,7 @@ Once you understand the `SeedScene` class, the next place to look is `./src/comp
 
 ## Importing Local Files
 
-Local files, such as images and 3D models, are imported into the application as URLs then loaded asynchronously with ThreeJS. Almost any filetype that ThreeJS might conceivably use should already be supported out of the box by Vite, though import syntax may vary between use cases. For instance, shader files can be loaded as raw text. For more information on asset loading, see [Vite's documentation](https://vitejs.dev/guide/assets.html).
+Local files, such as images and 3D models, are imported into the application as URLs then loaded asynchronously with ThreeJS. Almost any filetype that ThreeJS might conceivably use should already be supported out of the box, though import syntax may vary between use cases. For instance, shader files can be loaded as raw text. For more information on asset loading, see [Vite's documentation](https://vitejs.dev/guide/assets.html).
 
 ## Importing Modules from the Web
 
